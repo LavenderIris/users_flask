@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Show</title>
+</head>
+<style>
+    p {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .i_b{
+        margin-top: 8px;
+        display: inline-block;
+    }
+
+    button{
+        background-color: #E4D8DA;
+    }
+</style>
+<body>
+   
+    <h1>User {{user[0]['id']}}</h1>
+    <p>Full Name:  {{user[0]['first_name']}}  {{user[0]['last_name']}}</p>
+    <p>Email:  {{user[0]['email']}} </p>
+    <p>Created at:  {{user[0]['created_at']}} </p>
+
+    <form action="/users/{{user[0]['id']}}/edit" method='GET' class='i_b'>
+        <button type="submit" name="edit">Edit</button>
+    </form>
+
+    <form action="/users/{{user[0]['id']}}/destroy" method='GET' class='i_b'>
+        <button type="submit" name="delete">Delete</button>
+    </form>
+
+
+</body>
+</html>

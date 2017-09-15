@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Show</title>
+</head>
+<style>
+    p {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .i_b{
+        margin-top: 8px;
+        display: inline-block;
+    }
+
+    button{
+        background-color: #E4D8DA;
+    }
+
+    .m_b{
+        margin-bottom: 8px;
+    }
+</style>
+<body>
+   
+    <h1>Add User</h1>
+
+
+    <form action="/users/create" method='POST' class='i_b'>
+        <p>First Name<input type="text" name = 'first_name' ></p>
+        <p>Last Name<input type="text" name = 'last_name' > </p>
+        <p class='m_b'>Email<input type="text" name = 'email'></p>
+        <button type="submit" name="update">Add User</button>
+    </form>
+    <br>
+    <a href="/users">Go back</a>
+
+</body>
+</html>
